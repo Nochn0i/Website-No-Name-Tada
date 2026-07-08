@@ -27,9 +27,9 @@ const pictures = {
 };
 
 window.onload = () => {
-  LNkey()
-    .then(() => console.log("Nav key loaded"))
-    .catch((e) => console.log("Error Occured"));
+  // LNkey()
+  //   .then(() => console.log("Nav key loaded"))
+  //   .catch((e) => console.log("Error Occured"));
   LPcs(pictures, Object.keys(pictures))
     .then(() => console.log("Pictures were loaded"))
     .catch((e) => console.log("Error Occured, ERR:", e));
