@@ -8,6 +8,19 @@
   --font-marcellus: "Marcellus", serif;
   --font-space-mono: "Space Mono", monospace;
   --font-manrope: "Manrope", sans-serif;
+  --bg: #ffffff;
+  --ink: #111111;
+  --ink-soft: #8a8a8a;
+  --hairline: #e4e4e4;
+  --gutter: clamp(24px, 5vw, 90px);
+  --ink: #373737;
+  --mute: #6e6e6b;
+  --line: #6b6b6b4c;
+  --line-strong: #b9b7b1;
+  --film: #141414;
+  --film-ink: #f4f3ef;
+  --font-mono: "IBM Plex Mono", monospace;
+  --gutter: clamp(24px, 4vw, 64px);
 }
 
 * {
@@ -16,30 +29,9 @@
   box-sizing: border-box;
 }
 
-:root {
-  --bg: #ffffff;
-  --ink: #111111;
-  --ink-soft: #8a8a8a;
-  --hairline: #e4e4e4;
-  --gutter: clamp(24px, 5vw, 90px);
-}
-
 html {
   scroll-behavior: smooth;
   min-height: 100svh;
-}
-
-:root {
-  --ink: #373737;
-  --mute: #6e6e6b;
-  --line: #6b6b6b4c;
-  --line-strong: #b9b7b1;
-  --film: #141414;
-  --film-ink: #f4f3ef;
-
-  --font-mono: "IBM Plex Mono", monospace;
-
-  --gutter: clamp(24px, 4vw, 64px);
 }
 
 @keyframes reveal {
@@ -52,10 +44,6 @@ html {
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  background-color: #eee;
 }
 
 .intro__title,
