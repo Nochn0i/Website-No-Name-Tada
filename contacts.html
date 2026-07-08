@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Studio</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/contacts.css" />
+  </head>
+  <body>
+    <audio id="audio_track" src="./audio/Forget It.mp3" autoplay loop></audio>
+
+    <header>
+      <nav class="navigation-pannel">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </nav>
+    </header>
+
+    <main class="page">
+      <aside class="filmstrip" aria-hidden="true">
+        <span class="filmstrip__label">GET&nbsp;IN&nbsp;TOUCH</span>
+        <div class="filmstrip__frames">
+          <span class="filmstrip__frame">01</span>
+          <span class="filmstrip__frame">02</span>
+          <span class="filmstrip__frame">03</span>
+          <span class="filmstrip__frame">04</span>
+          <span class="filmstrip__frame">05</span>
+          <span class="filmstrip__frame">06</span>
+        </div>
+      </aside>
+
+      <section class="intro">
+        <h1 class="intro__title" style="--delay: 1">Contact</h1>
+        <h2 class="intro__kicker" style="--delay: 2">
+          Let&rsquo;s talk about the work.
+        </h2>
+        <p class="intro__body" style="--delay: 3">
+          Every project starts as a conversation, not a brief. Tell us what
+          you&rsquo;re working on and where it needs to go &mdash; we&rsquo;ll
+          follow up within one business day.
+        </p>
+
+        <dl class="details">
+          <div class="details__row" style="--delay: 4">
+            <dt>Email</dt>
+            <dd>
+              <a href="mailto:hello@studio.example">parlova08@proton.me</a>
+            </dd>
+          </div>
+          <div class="details__row" style="--delay: 5">
+            <dt>Phone</dt>
+            <dd><a href="tel:+310000000">+00 00000000</a></dd>
+          </div>
+          <div class="details__row" style="--delay: 6">
+            <dt>Studio</dt>
+            <dd>Home</dd>
+          </div>
+          <div class="details__row" style="--delay: 7">
+            <dt>Follow</dt>
+            <dd>
+              <a href="https://www.instagram.com/petrova__mikhail">@petrova__mikhail</a> 
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="form-section" aria-labelledby="form-heading">
+        <h2 id="form-heading" class="form-section__heading" style="--delay: 1">
+          Send a brief.
+        </h2>
+
+        <form class="form" id="contact-form" novalidate>
+          <div class="field" style="--delay: 2">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div class="field" style="--delay: 3">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="field" style="--delay: 4">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" />
+          </div>
+
+          <div class="field" style="--delay: 5">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <div class="form__footer">
+            <p
+              class="form__status"
+              id="form-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+            <button type="submit" class="btn" style="--delay: 6">
+              <span>Send</span>
+              <span class="btn__arrow" aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>Copyright © 2026 Lartz. All rights reserved.</footer>
+
+    <div class="music-pannel">
+      <marquee>Forget It.mp3</marquee>
+    </div>
+
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          document.getElementById("form-status").textContent =
+            "Message sent — we\u2019ll be in touch shortly.";
+          this.reset();
+        });
+    </script>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

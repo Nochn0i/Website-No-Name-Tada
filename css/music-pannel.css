@@ -1,0 +1,16 @@
+
+.music-pannel {
+  position: fixed;
+  height: 20px;
+  bottom: 0px;
+  left: 0px;
+  color: #eee;
+  font-size: 12px;
+  font-family: var(--font-marcellus);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.535), transparent);
+  width: 600px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

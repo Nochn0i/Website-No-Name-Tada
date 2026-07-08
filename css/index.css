@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&family=Marcellus&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "./header.css";
+@import "./footer.css";
+@import "./music-pannel.css";
+
+:root {
+  --font-bebas-neue: "Bebas Neue", sans-serif;
+  --font-marcellus: "Marcellus", serif;
+  --font-space-mono: "Space Mono", monospace;
+  --font-manrope: "Manrope", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #ffffff;
+  --ink: #111111;
+  --ink-soft: #8a8a8a;
+  --hairline: #e4e4e4;
+  --gutter: clamp(24px, 5vw, 90px);
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100svh;
+}
+
+:root {
+  --ink: #373737;
+  --mute: #6e6e6b;
+  --line: #6b6b6b4c;
+  --line-strong: #b9b7b1;
+  --film: #141414;
+  --film-ink: #f4f3ef;
+
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --gutter: clamp(24px, 4vw, 64px);
+}
+
+@keyframes reveal {
+  to {
+    filter: blur(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #eee;
+}
+
+.intro__title,
+.intro__kicker,
+.intro__body,
+.details__row,
+.form-section__heading,
+.field,
+.btn {
+  filter: blur(10px);
+  transform: translateY(40%);
+  opacity: 0;
+  animation: reveal 0.55s ease-in-out 1 forwards;
+  animation-delay: calc(var(--delay) * 0.1s);
+}
+
+@media (max-width: 1305px) {
+  .wrapper .slider-pannel:nth-child(1) .content-box .contents {
+    flex-direction: column;
+  }
+  .wrapper .slider-pannel:nth-child(1) .content-box .title {
+    left: 50px;
+    top: 40px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 1295px) {
+  .wrapper .slider-pannel {
+    flex-direction: column;
+    flex: 1;
+    min-height: 100svh;
+  }
+}
