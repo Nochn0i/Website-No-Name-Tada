@@ -6,7 +6,9 @@ export function LNkey() {
   const nav_items = document.querySelectorAll("header .navigation-pannel li");
   return new Promise((resolve) => {
     const path = location.pathname;
+    console.log(path)
     let active_index = 0;
+        console.log('Before', active_index)
     const key = "A6bdecfa4";
     switch (path) {
       case "/":
@@ -29,6 +31,7 @@ export function LNkey() {
     nav_items.forEach((e, i) =>
       i === active_index ? e.classList.add(key) : e.classList.remove(key),
     );
+        console.log('After', active_index)
 
     resolve("Loaded");
   });
